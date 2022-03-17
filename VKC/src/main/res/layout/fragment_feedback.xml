@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+   
+ <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/relativeHeader"
+        android:layout_margin="20dp"
+        android:scrollbars="none"   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"         
+        android:padding="10dp"
+        android:scrollbars="none" >
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="Name"
+            style="@+style/textstyle" />
+
+       <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/txtName"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="8dp"
+            android:background="@drawable/usertextbox"
+            android:singleLine="true" />
+              <LinearLayout
+                    android:id="@+id/secSearchLL"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/etName"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="2dp"
+                            android:text="Search : " />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3" >
+                        <AutoCompleteTextView
+                            android:id="@+id/autoSearch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/searchlist"
+                            android:hint="Type Keyword"
+                            android:singleLine="true"
+                            android:paddingLeft="5dp"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/imageViewSearchCat"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:src="@drawable/searchbutton" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="GO"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+                </LinearLayout>
+       <RelativeLayout 
+           android:id="@+id/relFeedback"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/secSearchLL">
+       <TextView
+            android:id="@+id/txtType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="Feedback Type"
+            style="@+style/textstyle" />
+       
+       <RadioGroup
+                android:id="@+id/relativeType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtType"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radioLaunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Product Launch"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/radioCustomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Customer"
+                    android:textSize="13sp" />
+            </RadioGroup>
+            </RelativeLayout>
+       <TextView
+           android:id="@+id/txtMessage"
+           style="@+style/textstyle"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/relFeedback"
+           android:layout_marginTop="10dp"
+           android:singleLine="true"
+           android:text="Feedback/Complaint" />
+
+       <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edt_txt_height"
+            android:layout_below="@+id/txtMessage"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/usertextbox"
+            android:gravity="top|left"
+            android:paddingLeft="8dp"
+            android:lines="8"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:singleLine="false" 
+             />
+
+      
+         <RelativeLayout
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etMessage"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp" >
+
+            <com.mobatia.vkcsalesapp.customview.CustomButton
+                android:id="@+id/imgSend"
+                style="@+style/buttonStyle"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+  
+                 android:layout_alignParentRight="true"
+                android:background="@drawable/button"
+                android:text="Submit" />
+
+            
+        </RelativeLayout>
+
+    </RelativeLayout>
+    
+    </ScrollView>
+ </RelativeLayout>
+
+</RelativeLayout>
+

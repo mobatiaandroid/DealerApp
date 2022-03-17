@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relSearchHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/searchbg" >
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/searchbar"
+            android:focusableInTouchMode="false"
+            android:hint="Search Products,Brands etc"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingBottom="8dp"
+            android:paddingLeft="35dp"
+            android:layout_marginBottom="6dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14dp" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edtSearch"
+            android:layout_alignLeft="@+id/edtSearch"
+            android:src="@drawable/search_quick" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

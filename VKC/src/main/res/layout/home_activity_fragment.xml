@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragmentHomeBase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF" >
+
+            <RelativeLayout
+                android:id="@+id/relSearchHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relSearchHeader"
+                android:background="#FFFFFF" >
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/reviewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relArrivalBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relBanner"
+                android:background="@drawable/newarrivals"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/relArrivalBannerNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/nextback" >
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relArrivalBannerPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14dp"
+                    android:background="@drawable/next" >
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relBrandBannerOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relArrivalBanner"
+                android:background="#FFFFFF" >
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pagerBrandBannerOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relBrandBannerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relBrandBannerOne"
+                android:background="#FFFFFF" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/pagerBrandBannerTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relMiddleBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relBrandBannerTwo"
+                android:background="#FFFFFF" >
+
+                <!-- <ImageView -->
+                <!-- android:id="@+id/bannerImageView2" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="match_parent" -->
+                <!-- android:layout_centerHorizontal="true" -->
+                <!-- android:layout_centerVertical="true" -->
+                <!-- android:visibility="gone" /> -->
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/reviewpagerOffer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone" />
+
+                <!-- <ProgressBar -->
+                <!-- android:id="@+id/progressBarBanner2" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_centerHorizontal="true" -->
+                <!-- android:layout_centerVertical="true" /> -->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relMiddleBanner"
+                android:background="#ff0000"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Popular Products"
+                    android:textColor="#FF0000"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relFooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bottomBar"
+                android:background="#ff0000" >
+
+                <LinearLayout
+                    android:id="@+id/lnrFooter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/reviewpagerThreeImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="gone" />
+
+                    <!-- <RelativeLayout -->
+                    <!-- android:layout_width="wrap_content" -->
+                    <!-- android:layout_height="wrap_content" -->
+                    <!-- android:layout_weight="0.35" -->
+                    <!-- android:background="@drawable/sliderbanner1" /> -->
+
+
+                    <!-- <RelativeLayout -->
+                    <!-- android:layout_width="wrap_content" -->
+                    <!-- android:layout_height="wrap_content" -->
+                    <!-- android:layout_weight="0.35" -->
+                    <!-- android:background="@drawable/sliderbanner2" /> -->
+
+
+                    <!-- <RelativeLayout -->
+                    <!-- android:layout_width="wrap_content" -->
+                    <!-- android:layout_height="wrap_content" -->
+                    <!-- android:background="@drawable/sliderbanner3" /> -->
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llDisable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:orientation="vertical" />
+
+</RelativeLayout>

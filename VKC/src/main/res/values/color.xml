@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="list_item_title">#000000</color>
+    <color name="list_background">#FFFFFF</color>
+    <color name="list_background_pressed">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="action_bar_title">#FF0000</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="vkcred">#cb181f</color>
+    <color name="vkcred_light">#F14E4F</color>
+    <color name="home_list_color">#EAEAEA</color>
+    <color name="dark_red">#DA251D</color>
+    <color name="light_red">#F78181</color>
+    <color name="list_row_color_white">#ffffff</color>
+    <color name="list_row_color_grey">#e1e1e1</color>
+    <color name="transparent">#00000000</color>
+
+</resources>

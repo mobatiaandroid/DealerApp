@@ -1,0 +1,202 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/relSearchHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/relHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relSearchHeader" >
+
+        <RelativeLayout
+            android:id="@+id/relFilter"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.5" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tvFilter"
+                android:src="@drawable/filter" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/tvFilter"
+                style="@style/textstyleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="FILTER" />
+
+            <View
+                android:id="@+id/viewFilter"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="#FF0000"
+                android:visibility="visible" >
+            </View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relSortBy"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.5" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tvSortBy"
+                android:src="@drawable/sortby" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/tvSortBy"
+                style="@style/textstyleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="SORTBY" />
+
+            <View
+                android:id="@+id/viewSortBy"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="#FF0000"
+                android:visibility="gone" >
+            </View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relList"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.5" >
+
+            <ImageView
+                android:id="@+id/imgList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tvList"
+                android:src="@drawable/list" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/tvList"
+                style="@style/textstyleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="LIST" />
+
+            <View
+                android:id="@+id/viewList"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="#FF0000"
+                android:visibility="gone" >
+            </View>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/relBottomLayout"
+        android:layout_below="@+id/relHeader"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/line"
+        android:fadingEdge="none"
+        android:scrollbars="none" />
+
+    <GridView
+        android:id="@+id/gridProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relHeader"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:visibility="gone"
+         android:fadingEdge="none"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/relBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/relShare"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.33"
+            android:background="@drawable/share" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.34"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/favouriteIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/round" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/favouriteIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="Favourite" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.33"
+            android:background="@color/vkcred" >
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="BuyNow"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

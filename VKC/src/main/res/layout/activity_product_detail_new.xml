@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </RelativeLayout>
+    <!-- rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr -->
+
+    <LinearLayout
+        android:id="@+id/firstView"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/relImage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" >
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/imagePager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgArrowLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:rotation="180"
+                android:src="@drawable/arrowright"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/imgArrowRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/imgArrowLeft"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/arrowright"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- rrrrrrrrrrrrrrrrrrrrrrrrrr -->
+
+    <RelativeLayout
+        android:id="@+id/relativSecondSec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:visibility="visible" >
+
+        <com.mobatia.vkcsalesapp.customview.HorizontalListView
+            android:id="@+id/listView"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+    <!--
+    <TextView
+        android:id="@+id/txtCartCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativSecondSec"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+       
+        android:text="14"
+        android:textColor="@color/vkcred"
+        android:textStyle="bold" />
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativSecondSec" >
+
+        <RelativeLayout
+            android:id="@+id/relativText"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/vkcred" >
+
+            <LinearLayout
+                android:id="@+id/llLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnLike"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/like"
+                    android:clickable="true"
+                    android:gravity="center" />
+
+                <com.mobatia.vkcsalesapp.customview.CustomTextView
+                    android:id="@+id/txtLikeCount"
+                    style="@style/textstyleWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnLike"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="12sp"
+                    android:textStyle="normal|italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDivide"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignRight="@+id/llLike"
+                android:background="#90ffffff"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/txtNameText"
+                style="@style/textstyleWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="VKC Slipons"
+                android:textSize="18sp"
+                android:textStyle="normal|italic" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/txtViewPriceSymbol"
+                style="@style/textstyleWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtNameText"
+                android:layout_toLeftOf="@+id/txtViewPrice"
+                android:gravity="center"
+                android:text="₹"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/txtViewPrice"
+                style="@style/textstyleWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignRight="@+id/txtNameText"
+                android:layout_below="@id/txtNameText"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/txtCatName"
+                style="@style/textstyleWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/txtNameText"
+                android:layout_alignBottom="@+id/txtNameText"
+                android:layout_alignLeft="@+id/llDivide"
+                android:text="Mens 1022"
+                android:textSize="14sp"
+                android:textStyle="bold|italic" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/txtCatText"
+                style="@style/textstyleWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/txtViewPriceSymbol"
+                android:layout_alignBottom="@+id/txtViewPriceSymbol"
+                android:layout_toRightOf="@+id/llDivide"
+                android:text="Mens"
+                android:textSize="14sp"
+                android:textStyle="normal|italic" />
+        </RelativeLayout>
+        <!-- <ScrollView -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- > -->
+
+
+        <!-- Matrix Data -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativText"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="45dp"
+                android:visibility="visible" >
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left"
+                    android:visibility="visible" >
+
+                    <TableLayout
+                        android:id="@+id/matrixLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="left"
+                        android:gravity="center" >
+                    </TableLayout>
+                </HorizontalScrollView>
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Case" />
+
+                <com.mobatia.vkcsalesapp.customview.HorizontalListView
+                    android:id="@+id/listViewSize"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/textView2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/textViewColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Color" />
+
+                <com.mobatia.vkcsalesapp.customview.HorizontalListView
+                    android:id="@+id/listViewColor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/textViewColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/lnrOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textViewQty"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:minLines="2"
+                        android:text="Qty (Cases)" />
+
+                    <EditText
+                        android:id="@+id/edtViewQty"
+                        android:layout_width="70dp"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/textViewQty"
+                        android:background="@drawable/usertextbox"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:padding="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/edtViewQty"
+                        android:text="cases"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/lnrOne"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:minLines="2"
+                        android:text="Pending Qty (Cases)" />
+
+                    <TextView
+                        android:id="@+id/edtViewQtyOneData"
+                        android:layout_width="70dp"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/textViewQty"
+                        android:background="@drawable/usertextbox"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="000" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- </ScrollView> -->
+    </RelativeLayout>
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/relativColorAndRating" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="50dp" -->
+    <!-- android:layout_alignParentBottom="true" -->
+    <!-- android:background="#FFFFFF" -->
+    <!-- android:orientation="horizontal" -->
+    <!-- android:weightSum="2" > -->
+
+
+    <!-- <RelativeLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="2" -->
+    <!-- > -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_margin="10dp" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerHorizontal="true" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:orientation="vertical" > -->
+    <!-- <RelativeLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content"> -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/textView2" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:text="Size" /> -->
+
+
+    <!-- <com.mobatia.vkcsalesapp.customview.HorizontalListView -->
+    <!-- android:id="@+id/listViewSize" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="30dp" -->
+    <!-- android:layout_marginLeft="15dp" -->
+    <!-- android:layout_toRightOf="@+id/textView2" /> -->
+    <!-- </RelativeLayout> -->
+
+
+    <!-- <RelativeLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="30dp" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/textViewColor" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:text="Color" /> -->
+
+
+    <!-- <com.mobatia.vkcsalesapp.customview.HorizontalListView -->
+    <!-- android:id="@+id/listViewColor" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="30dp" -->
+    <!-- android:layout_marginLeft="10dp" -->
+    <!-- android:layout_toRightOf="@+id/textViewColor" /> -->
+    <!-- </RelativeLayout> -->
+
+
+    <!-- <RelativeLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" > -->
+    <!-- <TextView -->
+    <!-- android:id="@+id/textViewQty" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:text="Quantity" /> -->
+    <!-- <EditText -->
+    <!-- android:id="@+id/edtViewQty" -->
+    <!-- android:layout_width="100dp" -->
+    <!-- android:layout_height="45dp" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:layout_toRightOf="@id/textViewQty" -->
+    <!-- android:inputType="number" -->
+    <!-- android:background="@drawable/usertextbox" /> -->
+    <!-- <TextView -->
+    <!-- android:id="@+id/txtViewQty" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:layout_toRightOf="@id/edtViewQty" -->
+    <!-- android:text="cases" /> -->
+    <!-- </RelativeLayout> -->
+    <!-- </LinearLayout> -->
+    <!-- </RelativeLayout> -->
+
+
+    <!-- <RelativeLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:visibility="gone" > -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerHorizontal="true" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:orientation="vertical" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/textViewRating" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:text="Rating" /> -->
+
+
+    <!-- <RatingBar -->
+    <!-- android:id="@+id/ratingBar" -->
+    <!-- style="@style/CustomRatingBar" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginTop="5dp" -->
+    <!-- android:numStars="5" -->
+    <!-- android:rating="4" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </RelativeLayout> -->
+    <!-- </LinearLayout> -->
+    <!-- <RelativeLayout -->
+    <!-- android:id="@+id/relativText" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="60dp" -->
+    <!-- android:layout_below="@+id/relativColorAndRating" -->
+    <!-- android:background="@color/vkcred" > -->
+
+
+    <!-- <com.mobatia.vkcsalesapp.customview.CustomTextView -->
+    <!-- android:id="@+id/txtNameText" -->
+    <!-- style="@style/textstyleWhite" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:layout_alignParentTop="true" -->
+    <!-- android:layout_marginRight="10dp" -->
+    <!-- android:layout_marginTop="5dp" -->
+    <!-- android:text="VKC Slipons" -->
+    <!-- android:textSize="18sp" -->
+    <!-- android:textStyle="normal|italic" /> -->
+
+
+    <!-- <com.mobatia.vkcsalesapp.customview.CustomTextView -->
+    <!-- android:id="@+id/txtViewPrice" -->
+    <!-- style="@style/textstyleWhite" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignLeft="@id/txtNameText" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:layout_below="@id/txtNameText" -->
+    <!-- android:text="Rs." -->
+    <!-- android:textSize="21sp" -->
+    <!-- android:textStyle="bold" /> -->
+    <!-- </RelativeLayout> -->
+
+
+    <!-- rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr -->
+
+    <LinearLayout
+        android:id="@+id/relBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.33"
+            android:background="@color/vkcred" >
+
+            <TextView
+                android:id="@+id/txtCartSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:drawableLeft="@drawable/cart"
+                android:text="14"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.34" >
+
+            <RelativeLayout
+                android:id="@+id/relShare"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/sharepress" >
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/favouriteIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/round" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/favouriteIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="Favourite" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relCart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.33"
+            android:background="@color/vkcred" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Add to Cart"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="app_name">Walkaroo Dealer</string>
+    <!-- Menu Strings -->
+    <string name="accessibility_overflow">OVERFLOWICON</string>
+
+
+    <!-- Navigation Drawer Menu Items -->
+
+    <!-- List Item Icons(Images) with strings(text of company name) -->
+    <!-- Keep them with titles array accordingly -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/home</item>
+        <item>@drawable/men</item>
+        <item>@drawable/women</item>
+        <item>@drawable/boy</item>
+        <item>@drawable/girl</item>
+        <item>@drawable/kids</item>
+        <item>@drawable/gaints</item>
+        <item>@drawable/gaints</item>
+        <item>@drawable/bag</item>
+        <item>@drawable/dress</item>
+
+    </array>
+
+    <!-- drawer_list_item Imageview Description -->
+    <string name="description_list_icon">Item Icon</string>
+    <string name="search">Search</string>
+    <string name="content_description">Content Description</string>
+
+
+    <!--     Common eror Messages -->
+
+    <string name="common_error_message">Cannot continue at this time.Please check your internet connectivity</string>
+
+    <string name="login">Log In</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="userid">User Name</string>
+    <string name="email">Email ID</string>
+    <string name="register">Submit</string>
+    <string name="phone">Phone Number</string>
+    <string name="signup">Login Request</string>
+</resources>

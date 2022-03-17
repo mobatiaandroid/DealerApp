@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+   <RelativeLayout
+        android:id="@+id/relContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/relImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp" >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+        </RelativeLayout>
+        <!-- <RelativeLayout -->
+        <!-- android:id="@+id/reldata" -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- > -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/relImage"
+            android:layout_alignTop="@+id/relImage"
+            android:layout_toRightOf="@id/relImage"
+            android:gravity="center_vertical" >
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/txtProductName"
+                style="@style/textstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:text="Mens flex Black/White"
+                android:visibility="visible" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/txtProductSize"
+                style="@style/textstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtProductName"
+                android:layout_below="@id/txtProductName"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:text="Size:7" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/txtProductItemNumber"
+                style="@style/textstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtProductName"
+                android:layout_below="@id/txtProductSize"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:visibility="gone"
+                android:text="ItemNumber:5002" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/txtProductPrice"
+                style="@style/textstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtProductName"
+                android:layout_below="@id/txtProductItemNumber"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:text="$750.00"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.mobatia.vkcsalesapp.customview.CustomTextView
+                android:id="@+id/txtProductOff"
+                style="@style/textstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/txtProductName"
+                android:layout_below="@+id/txtProductPrice"
+                android:paddingLeft="20dp"
+                android:paddingTop="2dp"
+                android:visibility="gone"
+                android:text="10%"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- </RelativeLayout> -->
+
+
+            <!--
+        <com.mobatia.vkcsalesapp.customview.CustomTextView
+            android:id="@+id/txtProductRating"
+            style="@style/textstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtProductOff"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/ratingBar"
+            android:text="rating"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/CustomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/txtProductOff"
+            android:layout_marginTop="5dp"
+            android:visibility="invisible" />
+            -->
+
+            <com.mobatia.vkcsalesapp.customview.CustomButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txtProductOff"
+                android:layout_toRightOf="@+id/txtProductItemNumber"
+                android:background="@drawable/cart"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

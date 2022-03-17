@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/llMap">
+
+<!--     <TextView -->
+<!--         android:id="@+id/textView1" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_centerHorizontal="true" -->
+<!--         android:layout_centerVertical="true" -->
+<!--         android:text="Location" -->
+<!--         android:textAppearance="?android:attr/textAppearanceLarge" /> -->
+
+    <!-- <fragment -->
+    <!-- android:id="@+id/map" -->
+    <!-- android:name="com.google.android.gms.maps.SupportMapFragment" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- /> -->
+
+   <!-- <com.google.android.gms.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />-->
+    <fragment
+        android:id="@+id/mapview"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mapview"
+        android:layout_margin="10dp">
+        
+        <TextView  
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Veekesy Rubber Industries"/>
+        
+        <TextView  
+             android:id="@+id/txtStreet"
+            android:layout_below="@id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Street: VKC tower, NH 17,"/>
+        <TextView  
+            android:id="@+id/txtCity"
+            android:layout_below="@id/txtStreet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City: Kolathara, Calicut"/>
+        <TextView  
+            android:id="@+id/txtState"
+            android:layout_below="@id/txtCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State: Kerala"/>
+        <TextView  
+            android:id="@+id/txtCountry"
+            android:layout_below="@id/txtState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country: India"/>
+         <TextView  
+            android:id="@+id/txtContactno"
+            android:layout_below="@id/txtCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact No: 09526221100"/>
+         <TextView
+             android:layout_below="@id/txtContactno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WebSite: www.vkcgroup.com"/>
+    </RelativeLayout>
+    
+   
+
+</RelativeLayout>
