@@ -5,10 +5,10 @@ public interface VKCUrlConstants {
      * Bibin Comment VKC USERS 4. Sales Head 5. Retailer 6. Dealer 7. Sub Dealer
      */
     // Live AWS------------------------------------------------
-    public String BASE_URL = "https://mobile.walkaroo.in/vkc/";
+//    public String BASE_URL = "https://mobile.walkaroo.in/vkc/";
 
     // Dev URL
-    //public String BASE_URL = "http://dev.mobatia.com/vkc2.5/";
+    public String BASE_URL = "http://dev.mobatia.com/vkc2.5/";
 
     /* Settings Api */
 

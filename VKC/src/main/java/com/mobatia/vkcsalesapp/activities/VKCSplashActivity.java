@@ -1,5 +1,9 @@
 package com.mobatia.vkcsalesapp.activities;
 
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.READ_PHONE_STATE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
@@ -10,15 +14,14 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
-import com.mobatia.vkcsalesapp.BuildConfig;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.multidex.BuildConfig;
+
 import com.mobatia.vkcsalesapp.R;
 import com.mobatia.vkcsalesapp.appdialogs.PushNotificationDialog;
 import com.mobatia.vkcsalesapp.appdialogs.PushNotificationDialog.DialogListener;
@@ -43,10 +46,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
-import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
-import static android.Manifest.permission.READ_PHONE_STATE;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 public class VKCSplashActivity extends BaseActivity implements VKCUrlConstants,
         VKCJsonTagConstants, VKCDbConstants {
